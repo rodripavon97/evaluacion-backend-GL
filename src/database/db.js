@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose')
 // const Fruit = require("../models/fruitsModel.js");
 console.log("conect a moongoose")

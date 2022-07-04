@@ -18,11 +18,6 @@ const ClubController = (Club) => {
   const postClub = async (req, res, next) => {
     try {
       const { body } = req;
-      // const encryptedCodeLeague = await bcrypt.hash(body.passwordFifa, 10);
-      // const encryptedData = {
-      //   ...body,
-      //   passwordFifa: encryptedCodeLeague,
-      // };
       const club = await new Club(body);
       await club.save();
       res.status(httpStatus.CREATED).json(club);

@@ -1,9 +1,10 @@
 const express = require("express");
 const playerFootballController = require("../controllers/playerFootballController");
 const validator = require("express-joi-validation").createValidator({});
-const bodySchema = require("../validators/playerFootballBodyValidator");
-const paramsSchema = require("../validators/playerFootballParamsValidator");
-const querySchema = require("../validators/playerFootballQueryValidator");
+const {bodySchema, paramsSchema, querySchema} = require("../validators/playerFootballValidator")
+// const bodySchema = require("../validators/playerFootballBodyValidator");
+// const paramsSchema = require("../validators/playerFootballParamsValidator");
+// const querySchema = require("../validators/playerFootballQueryValidator");
 const router = (Club) => {
   const playerFootballRouter = express.Router();
 
